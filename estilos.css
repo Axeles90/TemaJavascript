@@ -7,6 +7,9 @@ body{
     font-size: 14px;
     color: black;
 }
+h1{
+    color: blue;
+}
 #linea{
     width: 99%;
     border-bottom: solid 1px rgb(160, 160, 160);
@@ -41,3 +44,41 @@ body{
     padding: 15px;
     transition: padding 0.2s linear;
 }
+.txtConImg a{
+    color: blueviolet;
+}
+.txtConImg img{
+    height: 150px;
+    width: 150px;
+}
+.txtConImg .imginesem{
+    height: 150px;
+    width: 250px;
+}
+.formularioTipo1 label{
+    color: brown;
+}
+.formularioTipo1 input{
+    background-color: rgb(255, 255, 255);
+    border: rgb(83, 83, 83) 1px solid;
+    color: black;
+}
+.formularioTipo1 textarea{
+    background-color: rgb(255, 255, 255);
+}
+.boton{
+    background-color: beige;
+    border-radius: 3px;
+    box-shadow: rgb(87, 87, 87) 1px 1px 2px;
+}
+.boton:hover{
+    background-color: rgb(199, 199, 186); 
+}
+::placeholder{
+    color: black;
+}
+#pieDePagina img{
+    height: 150px;
+    width: 150px;
+}
+

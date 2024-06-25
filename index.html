@@ -29,15 +29,21 @@
 
 		<div id= "cuerpoCentral">
             <div class="menuflex">
-                <div class="menubox"><a href="">Inicio</a></div>
-                <div class="menubox"><a href="">¿Quiénes somos?</a></div>
-                <div class="menubox"><a href="">Productos</a></div>
-                <div class="menubox"><a href="">Noticias</a></div>
+                <div class="menubox"><a href="index.html">Inicio</a></div>
+                <div class="menubox"><a href="quienessomos.html">¿Quiénes somos?</a></div>
+                <div class="menubox"><a href="productos.html">Productos</a></div>
+                <div class="menubox"><a href="noticias.html">Noticias</a></div>
             </div>
 		<!--Texto con imágenes -->
 			<div class="txtConImg">
-					Introduciremos Texto e Imágenes
-			</div>
+					<p>Aprender el arte del diseño y desarrollo web, es a dia de hoy un reto profesional.</p>
+                    <p>ûede visitar la revista digital <a href="https://www.inesem.es/https://www.inesem.es/" target="_blank">de inesem Business School</a> para encontrar referencias de actualidad.</p>
+                    <p>Puedes consultar algunos de <a href="https://www.inesem.es/#" target="_blank">nuestros cursos</a> entre los varios disponibles. Cuando haya que utilizar un editor de textos recomendamos el uso de Notepad++ o Sublime Text,
+                        aunque son válidas otras alternativas, use la mas cómoda para usted.
+                    </p>
+                    <img src="archivos/imagen/inesem.png" alt="Inesem" title="Inesem Business School">
+                    <img src="archivos/imagen/logo-inesem-grande.png" alt="Inesem png" title="Logo Inesem" class="imginesem">
+            </div>
 		<!-- Fin del texto con imágenes -->
 <!-- Formulario de contacto -->
 		<form name="formularioContacto" class="formularioTipo1" method="get" action="accion.html">
@@ -46,6 +52,18 @@
 				<p>Si quieres contactar con nosotros envíanos este formulario relleno: </p>
 					<!-- crearemos un formulario de contacto para el usuario -->
 			</div>
+            <label for="nombre" id="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" tabindex="1" placeholder="Tu nombre..." required><br><br>
+            <label for="apellidos" id="apellidos">Apellidos:</label>
+            <input type="text" name="apellidos" id="apellidos" tabindex="2" placeholder="Tus apellidos..." required><br><br>
+            <label for="direccion" id="direccion">Direccion:</label>
+            <input type="text" name="direccion" id="direccion" tabindex="3" placeholder="Tu direccion..."><br><br>
+            <label for="email" id="email">Correo electrónico:</label>
+            <input type="email" name="email" id="email" tabindex="4" placeholder="Tu email..." required><br><br>
+            <label for="mensaje" id="mensaje">Mensaje:</label>
+            <textarea name="mensaje" id="mensaje" placeholder="Tu mensaje..." tabindex="5"></textarea><br><br>
+            <input type="submit" value="Enviar" class="boton">
+            <input type="reset" value="Cancelar" class="boton">
 		</form>
 <!-- Fin de formulario de contacto -->
 </div>
@@ -54,7 +72,8 @@
 <!-- Fin de contenedor para la parte central -->
 <!-- Pie de página o footer -->
 <div id="pieDePagina">
-Datos de copyright y logotipo
+    <img src="archivos/imagen/monito.jpg" alt="copy" title="monitocopyright">
+Miprimerejemplocopyright 2024-2024 copy.com
 </div>
 <!-- Fin del pie de página o footer -->
 </body>
