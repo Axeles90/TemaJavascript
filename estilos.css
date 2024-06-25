@@ -1,0 +1,43 @@
+body{
+    margin: auto;
+    height: 100%;
+    width: 70%;
+    background-color: grey;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: black;
+}
+#linea{
+    width: 99%;
+    border-bottom: solid 1px rgb(160, 160, 160);
+    border-right: solid 1px white;
+    border-left: none;
+    color: rgb(64, 63, 63);
+}
+.menuflex{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.menubox{
+    border: solid 1px rgb(0, 18, 135);
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px rgb(1, 2, 38);
+    background-color:rgb(183, 183, 190) ;
+    font-weight: bold;
+    margin: 10px;
+    padding: 5px 10px 5px 10px;
+    
+    
+}
+.menubox a{
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(69, 69, 112);
+}
+.menubox:hover{
+    background-color: rgb(135, 135, 135);
+    padding: 15px;
+    transition: padding 0.2s linear;
+}
