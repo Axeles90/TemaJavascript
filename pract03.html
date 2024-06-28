@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica numero 3 javascript</title>
+    <script>
+        for(var i = 0;i<=5;i++){
+            document.write(i)
+            document.write("<br>")
+        }
+
+        var n = 0
+        while(n <= 5){
+            document.write(n)
+            document.write("<br>")
+            n++
+        }
+
+        nombre = prompt("Introduzca su nombre" , "Nombre")
+        contraseña = prompt("Introduzca la contraseña", "Contraseña")
+        if((nombre=="Axel") && (contraseña=="clave")){
+            document.write("Bienvenido Sr " + nombre)
+        }
+        else if((nombre=="Axel") && (contraseña!="clave")){
+            alert("Contraseña incorrecta")
+        }
+        else if((nombre!="Axel") && (contraseña=="clave")){
+            alert("Usuario incorrecto")
+        }
+        else{
+            alert("Usuario y contraseña incorrectos")
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

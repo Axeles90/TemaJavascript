@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica numero 2 javascript</title>
+    <script type="text/javascript">
+        function diasemana(valor){
+            var dia;
+            if(valor ==1)dia="Lunes";
+            else if(valor==2) dia ="Martes";
+            else if(valor==3) dia ="Miercoles";
+            else if(valor==4) dia ="Jueves";
+            else if(valor==5) dia ="Viernes";
+            else if(valor==6) dia ="Sabado";
+            else if(valor==7) dia ="Domingo";
+        
+            return dia;
+        }
+
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        var valor = prompt("Introduzca un numero del 1 al 7" , "1");
+        alert(diasemana(valor));
+    </script>
+</body>
+</html>
