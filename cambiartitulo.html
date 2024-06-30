@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de javascript</title>
+    <link rel="stylesheet" href="estilos2.css">
+    <script>
+        var i=1;
+        var titulooriginal = document.title;
+        function cambiartitulo(){
+            document.title = titulooriginal.substring(0,i);
+            i++;
+            if(i>titulooriginal.length) i=0;
+            setTimeout("cambiartitulo()", 100);
+        }
+        cambiartitulo();
+
+    </script>
+</head>
+<body >
+    <script>
+        document.write("navigator <b>alinkcolor</b>: "+ document.alinkColor + "<br>");
+        document.write("navigator <b>lastmodified</b>: "+ document.lastModified + "<br>");
+        document.write("navigator <b>bgcolor</b>: "+ document.bgColor + "<br>");
+        document.write("navigator <b>fgcolor</b>: "+ document.fgColor + "<br>");
+        document.write("navigator <b>referrer</b>: "+ document.referrer + "<br>");
+    </script>
+    <br><br>
+
+    <img src="archivos/imagen/dragon.jpg" alt="" title="dragon">
+    <img src="archivos/imagen/lobo.jpg" alt="" title="lobo">
+    <img src="archivos/imagen/colores.avif" alt="" title="colores">
+    <img src="archivos/imagen/hoja.jpg" alt="" title="hoja">
+<br><br>
+<script>
+    function modificarimagen(){
+        var valor = 0;
+        var valor2 = 0;
+        valor = prompt("introduzca la primera imagen a modificar (0-4)" , "0");
+        while((valor<0)||(valor>3)){
+            valor=prompt("Por favor, introduzca de nuevo el indice de la primera imagen (0-3)", "0");
+        }
+
+        valor2 = prompt("introduzca la segunda imagen a modificar (0-4)" , "0");
+        while((valor2<0)||(valor2>3)){
+            valor2=prompt("Por favor, introduzca de nuevo el indice de la segunda imagen (0-3)", "0");
+        }
+        if(valor2>valor){
+            var aux=document.images[valor].src;
+            document.images[valor].src=document.images[valor2].src;
+            document.images[valor2].src=aux;
+        }
+        else{
+            alert("el numero inicial debe ser inferior al final");
+        }
+    }
+</script>
+    <input type="button" name="" id="" value="modificar imagen" onclick="modificarimagen();">
+   
+
+</body>
+</html>

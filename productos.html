@@ -21,12 +21,30 @@
                 nuevaventana = null;
             }
         }
+        
+        function cargarpagina(){
+            paginab = window.open("noticias.html","nueva", "with=500", "height=500");
+        }
     </script>
 </head>
-<body>
+<body onload="cargarpagina()">
     <a href="archivos/imagen/monito.jpg" onmouseover="mostrarmensaje('Encima del hipervinculo') ;return true" 
     onmouseout="mostrarmensaje('fuera del hipervinculo'); return true"  title="Enlace a archivo">Hipervinculo</a><br><br>
 <input type="button" value="Abrir ventana" onclick="abrirventana()">
-<input type="button" value="Cerrar ventana" onclick="cerrarventana()">
+<input type="button" value="Cerrar ventana" onclick="cerrarventana()"><br><br>
+    <script>
+        document.write("<b>Propiedad href: </b>"+location.href+"<br>");
+        document.write("<b>Propiedad hash: </b>"+location.hash+"<br>");
+        document.write("<b>Propiedad host: </b>"+location.host+"<br>");
+        document.write("<b>Propiedad hostname: </b>"+location.hostname+"<br>");
+        document.write("<b>Propiedad pathname: </b>"+location.pathname+"<br>");
+        document.write("<b>Propiedad port: </b>"+location.port+"<br>");
+        document.write("<b>Propiedad protocol: </b>"+location.protocol+"<br>");
+        document.write("<b>Propiedad search: </b>"+location.search+"<br>"); 
+    </script>
+
+<input type="button" name="adelante" id="adelante" value="adelante" onclick="history.forward()">
+<input type="button" name="atras" id="atras" value="atras" onclick="history.back()"><br><br><br>
+
 </body>
 </html>

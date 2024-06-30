@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias</title>
+    <link rel="stylesheet" href="estilos2.css">
+    <script>
+        function irmarcador(marcador){
+            location.hash = marcador;
+        }
+    </script>
+</head>
+<body>
+    <a name="primero"><h1>Primera seccion</h1></a>
+    <form>
+        <input type="button" name="siguiente1" value="SIGUIENTE" onclick="irmarcador('segundo')">
+    </form>
+    <hr>
+    <a name="segundo"><h1>Segunda seccion</h1></a>
+
+    <form>
+        <input type="button" name="siguiente2" value="SIGUIENTE" onclick="irmarcador('tercero')">
+    </form>
+    <hr>
+    <a name="tercero"><h1>Tercera seccion</h1></a>
+
+    <form>
+        <input type="button" name="siguiente3" value="SIGUIENTE" onclick="irmarcador('primero')">
+    </form>
+    <hr>
+</body>
+</html>

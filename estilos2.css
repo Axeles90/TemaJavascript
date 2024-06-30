@@ -1,0 +1,16 @@
+img{
+    margin-left: 50px;
+    box-shadow: 0 0 20px rgb(106, 106, 106);
+    width: 150px;
+    height: 150px;
+    border: 3px solid rgb(96, 60, 206);
+    border-radius: 50%;
+}
+img:hover{
+    transform: scale(1.1);
+    transition: 0.6s;
+    cursor:grab;
+}
+img:active{
+    cursor: grabbing;
+}
