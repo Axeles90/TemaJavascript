@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="estilos2.css">
+    <script>
+        function mostrarmensaje(mensaje){
+            window.status= mensaje;
+        }
+         var nuevaventana = null;
+
+        function abrirventana(){
+            nuevaventana = window.open("", "nueva" , "width=500" , "height=100");
+        }
+
+        function cerrarventana(){
+            if(nuevaventana != null){
+                nuevaventana.close();
+                nuevaventana = null;
+            }
+        }
+    </script>
+</head>
+<body>
+    <a href="archivos/imagen/monito.jpg" onmouseover="mostrarmensaje('Encima del hipervinculo') ;return true" 
+    onmouseout="mostrarmensaje('fuera del hipervinculo'); return true"  title="Enlace a archivo">Hipervinculo</a><br><br>
+<input type="button" value="Abrir ventana" onclick="abrirventana()">
+<input type="button" value="Cerrar ventana" onclick="cerrarventana()">
+</body>
+</html>
