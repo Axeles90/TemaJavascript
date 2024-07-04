@@ -1,0 +1,41 @@
+body{
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    background: url(archivos/fondo.jpg);
+    width: 100vh;
+    height: 100vh;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    color: white;
+}
+#formulario{
+    border: solid 3px white;
+    width: 400px;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px black;
+    backdrop-filter: blur(8px);
+    padding: 20px;
+}
+fieldset{
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+.default{
+    text-align: center;
+}
+.boton{
+    border-radius: 2px;
+    border: 0;
+    padding: 5px;
+    margin: 5px;
+    box-shadow: 0 0 10px black;
+}
+.boton:hover{
+    cursor: pointer;
+    background-color: antiquewhite;
+}
