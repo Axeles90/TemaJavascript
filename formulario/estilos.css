@@ -50,3 +50,6 @@ input:focus::placeholder{
     background-color: transparent;
     border: solid 2px rgb(106, 107, 106);
 }
+a{
+    color: aliceblue;
+}

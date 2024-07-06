@@ -39,11 +39,12 @@
             }
             else return false;
         }
+
     </script>
 </head>
 <body>
     <div id="formulario" >
-        <form action="/send/" method="post" name="contacto" id="contacto" onsubmit="return validarformulario(document.contacto.nombre, document.contacto.email)">
+        <form action="/send/" method="post" name="contacto" id="contacto" onsubmit="return validarformulario(document.contacto.nombre , document.contacto.email)">
             <fieldset>
                 <legend>Datos de contacto</legend>
                 <label for="" name="nombre" id="nombre">Nombre</label>
@@ -67,7 +68,8 @@
             <input type="submit" name="enviar" id="enviar" class="boton">
             <input type="reset" name="reset" id="reset" value="Cancelar" class="boton"><br><br>
             
-                <input type="text" name="nombre" id="nombre" class="prueba" placeholder="Ingrese su nombre...">
+                <input type="text" name="nombre" id="nombre" class="prueba" placeholder="Ingrese su nombre..."><br><br>
+
         </form>
     </div>
 </body>
