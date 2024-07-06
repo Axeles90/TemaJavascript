@@ -5,18 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de contacto </title>
     <link rel="stylesheet" href="estilos.css">
+    <script>
+        function validarnombre(elemento){
+            if((elemento.value.length < 6) || (elemento.value.length > 15)){
+                alert("El usuario debe tener entre 6 y 15 caracteres");
+                return false;
+            }
+            else return true;
+        }
+
+        function validaremail(elemento){
+            if(
+                (elemento.value.indexOf(" ")==-1) &&
+                (elemento.value.indexOf("@")!=-1) &&
+                (elemento.value.indexOf(".")!=-1)
+            ){
+                return true;
+            }
+            else{
+                alert("Email no valido");
+                return false;
+            }
+        }
+
+        function validarformulario(elemento1,elemento2){
+            var nom;
+            var correoelectronico;
+            nom = validarnombre(elemento1);
+            correoelectronico = validaremail(elemento2);
+            if((nom == true) && (correoelectronico == true)){
+                alert("Bienvenido");
+                return true;
+            }
+            else return false;
+        }
+    </script>
 </head>
 <body>
-    <div id="formulario">
-        <form action="/send/" method="post" name="contacto" id="contacto">
+    <div id="formulario" >
+        <form action="/send/" method="post" name="contacto" id="contacto" onsubmit="return validarformulario(document.contacto.nombre, document.contacto.email)">
             <fieldset>
                 <legend>Datos de contacto</legend>
                 <label for="" name="nombre" id="nombre">Nombre</label>
-                <input type="text" name="nombre" id="nombre" required tabindex="1" placeholder="Nombre...."><br><br>
+                <input type="text" name="nombre" id="nombre" required tabindex="1" placeholder="Nombre...." onchange="return validarnombre(this);"><br><br>
                 <label for="" name="apellidos" id="apellidos">Apellidos</label>
                 <input type="text" name="apellidos" id="apellidos" required placeholder="Apellidos..."><br><br>
                 <label for="" name="email" id="email">E-mail</label>
-                <input type="email" name="email" id="email" required placeholder="Correo electronico..."> <br><br>
+                <input type="email" name="email" id="email" required placeholder="Correo electronico..." onchange="return validaremail(this);"> <br><br>
             </fieldset>
             <fieldset>
                 <legend>Informacion adicional</legend>
