@@ -40,9 +40,27 @@
             else return false;
         }
 
+        function cargarpagina(){
+            if(navigator.appCodeName.indexOf("Mozilla") != -1){
+                alert("Esta en mozilla");
+            }
+            else if (naigator.appCodeName.indexOf ("Chrome") != -1){
+                alert("Esta en chrome");
+            }
+            else{
+                alert("Esta en otro navegador");
+            }
+        }
+
+        function escalar(h){
+            if( h == 480) return 0.75
+            else if (h ==600) return 1
+            else if (h == 768) return 1.25
+        }
+        
     </script>
 </head>
-<body>
+<body onload="cargarpagina();">
     <div id="formulario" >
         <form action="/send/" method="post" name="contacto" id="contacto" onsubmit="return validarformulario(document.contacto.nombre , document.contacto.email)">
             <fieldset>
@@ -70,7 +88,19 @@
             
                 <input type="text" name="nombre" id="nombre" class="prueba" placeholder="Ingrese su nombre..."><br><br>
 
-        </form>
+            
+        </form><br>
+        <div class="picachu">
+            <script>
+                var alto = screen.height;
+                var escala = escalar(alto);
+                var anchoimg = escala * 601;
+                var altoimg = escala * 397;
+                document.write('<CENTER><img border="0" heigth="');
+                document.write(altoimg + '"alt="pikachu.png (46285 bytes)" src="pikachu.png" width="');
+                document.write(anchoimg + '">');
+            </script>
+        </div>
     </div>
 </body>
 </html>
